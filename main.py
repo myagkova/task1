@@ -35,7 +35,7 @@ def main(argv):
     process = ''
     interval = ''
     try:
-        opts, args = getopt.getopt(argv, "h", ["process=", "interval="])
+        opts, args = getopt.getopt(argv, 'h', ['process=', 'interval='])
     except getopt.GetoptError:
         print(
             'test.py -process home/Telegram -interval 30')
@@ -45,9 +45,9 @@ def main(argv):
             print(
                 'test.py -process home/Telegram -interval 30')
             return
-        elif opt == "--process":
+        elif opt == '--process':
             process = arg
-        elif opt == "--interval":
+        elif opt == '--interval':
             interval = int(arg)
     monitor_process_statistics(process, interval)
 
